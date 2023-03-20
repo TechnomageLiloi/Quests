@@ -3,6 +3,7 @@
 namespace Liloi\Exams\Engine\Domain\Questions;
 
 use Liloi\API\Errors\Exception;
+use Liloi\Blueprint\Engine\Domain\Lessons\Status;
 use Liloi\Blueprint\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
@@ -63,7 +64,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
         $data = [
             'title' => 'Enter the title',
-            'status' => '1',
+            'status' => Statuses::TODO,
             'type' => '1',
             'program' => '// comment',
             'hint' => '// comment',
