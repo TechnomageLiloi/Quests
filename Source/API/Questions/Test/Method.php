@@ -17,6 +17,8 @@ class Method extends SuperMethod
 
         switch ($entity->getType())
         {
+            case Types::CHECK:
+                $template = 'Check'; break;
             case Types::RADIO:
                 $template = 'Radio'; break;
             case Types::CARD:
