@@ -6,7 +6,7 @@
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-framework/Frontside/Library/Backbone.min.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-api/Client/API.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/Source/Client/Command.js'); ?></script>
-        <script><?php echo file_get_contents(ROOT_DIR . '/Source/API/Blueprints/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/Source/API/Questions/Requests.js'); ?></script>
         <style><?php echo file_get_contents(ROOT_DIR . '/Source/Engine/Manager.css'); ?></style>
         <title>Exams</title>
     </head>
@@ -25,7 +25,7 @@
             </tr>
         </table>
         <script>
-            
+            API.Questions.collection();
         </script>
     </body>
 </html>

@@ -2,9 +2,7 @@
 
 namespace Liloi\Exams\Engine\Domain\Questions;
 
-use Liloi\API\Errors\Exception;
-use Liloi\Blueprint\Engine\Domain\Lessons\Status;
-use Liloi\Blueprint\Engine\Domain\Manager as DomainManager;
+use Liloi\Exams\Engine\Domain\Manager as DomainManager;
 
 class Manager extends DomainManager
 {
