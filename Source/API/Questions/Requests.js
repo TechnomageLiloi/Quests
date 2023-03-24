@@ -64,6 +64,17 @@ API.Questions = {
         });
     },
 
+    test: function (key_question)
+    {
+        API.request('Exams.Questions.Test', {
+            'key_question': key_question
+        }, function (data) {
+            $('#map').html(data.render);
+        }, function () {
+
+        });
+    },
+
     save: function (key_question)
     {
         if(!confirm('Are you sure?'))

@@ -24,6 +24,8 @@
             <td><?php echo $entity->getTitle(); ?></td>
             <td><?php echo $entity->getStatusTitle(); ?></td>
             <td style="text-align: right; width: 300px;">
+                <a href="javascript:void(0)" onclick="API.Questions.test('<?php echo $entity->getKey(); ?>');">Test</a>
+                &diams;
                 <a href="javascript:void(0)" onclick="API.Questions.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
                 &diams;
                 <a href="javascript:void(0)" onclick="API.Questions.remove('<?php echo $entity->getKey(); ?>');">Make obsolete</a>
