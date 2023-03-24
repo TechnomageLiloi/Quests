@@ -38,6 +38,12 @@ class Entity extends AbstractEntity
         return $this->getField('key_question');
     }
 
+    public function getTypeTitle(): string
+    {
+        return Types::$list[$this->getType()];
+    }
+
+
     public function getStatusTitle(): string
     {
         return Statuses::$list[$this->getStatus()];
