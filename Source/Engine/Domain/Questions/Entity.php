@@ -61,7 +61,7 @@ class Entity extends AbstractEntity
         return Parser::parseString($this->getProgram());
     }
 
-    public function getElement(string $key): string
+    public function getElement(string $key)
     {
         $data = json_decode($this->getProgram(), JSON_UNESCAPED_UNICODE);
 
