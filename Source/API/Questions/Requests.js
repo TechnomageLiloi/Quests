@@ -1,13 +1,8 @@
-/**
- * Blueprints request function list.
- *
- * @type {{edit: API.Blueprints.edit, show: API.Blueprints.show, save: (function(*=): (undefined)), create: (function(*=): (undefined)), remove: (function(*=): (undefined))}}
- */
-API.Problems = {
-    collection: function (uid)
+API.Questions = {
+    collection: function ()
     {
-        API.request('Blueprint.Problems.Collection', {
-            'uid': uid
+        API.request('Exams.Questions.Collection', {
+            
         }, function (data) {
             $('#map').html(data.render);
         }, function () {
@@ -17,7 +12,7 @@ API.Problems = {
 
     show: function (key_problem)
     {
-        API.request('Blueprint.Problems.Show', {
+        API.request('Exams.Questions.Show', {
             'key_problem': key_problem
         }, function (data) {
             $('#map').html(data.render);
@@ -26,18 +21,17 @@ API.Problems = {
         });
     },
 
-    create: function (key_blueprint, id_type, uid)
+    create: function ()
     {
         if(!confirm('Are you sure?'))
         {
             return;
         }
 
-        API.request('Blueprint.Problems.Create', {
-            'key_blueprint': key_blueprint,
-            'id_type': id_type
+        API.request('Exams.Questions.Create', {
+
         }, function (data) {
-            API.Problems.collection(uid);
+            API.Questions.collection();
         }, function () {
 
         });
@@ -50,10 +44,10 @@ API.Problems = {
             return;
         }
 
-        API.request('Blueprint.Problems.Remove', {
+        API.request('Exams.Questions.Remove', {
             'key_problem': key_problem
         }, function (data) {
-            API.Problems.collection(uid);
+            API.Questions.collection();
         }, function () {
 
         });
@@ -61,7 +55,7 @@ API.Problems = {
 
     edit: function (key_problem, uid)
     {
-        API.request('Blueprint.Problems.Edit', {
+        API.request('Exams.Questions.Edit', {
             'key_problem': key_problem,
             'uid': uid
         }, function (data) {
@@ -79,14 +73,14 @@ API.Problems = {
         }
 
         const jq_block = $('#blueprint-edit');
-        API.request('Blueprint.Problems.Save', {
+        API.request('Exams.Questions.Save', {
             'key_problem': key_problem,
             'title': jq_block.find('[name="title"]').val(),
             'mark': jq_block.find('[name="mark"]').val(),
             'program': jq_block.find('[name="program"]').val(),
             'type': jq_block.find('[name="type"]').val()
         }, function (data) {
-            API.Problems.collection(uid);
+            API.Questions.collection();
         }, function () {
 
         });
