@@ -21,5 +21,30 @@ const Testing = {
         const is_correct = jq_selected.data('correct');
 
         alert('Answer is ' + (is_correct ? '' : 'in') + 'correct');
+    },
+
+    checkCheck: function (key_question)
+    {
+        const id = '#testing-' + key_question;
+        const jq_block = $(id);
+        const jq_checks = jq_block.find('input');
+
+        let is_final = true;
+
+        jq_checks.each(function () {
+            const jq_check = $(this);
+            const is_correct = jq_check.data('correct');
+            const is_checked = jq_check.is(':checked');
+
+            if(
+                (is_correct && !is_checked) ||
+                (!is_correct && is_checked)
+            )
+            {
+                is_final = false;
+            }
+        });
+
+        alert('Answer is ' + (is_final ? '' : 'in') + 'correct');
     }
 };
