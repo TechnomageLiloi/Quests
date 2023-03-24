@@ -38,7 +38,7 @@ class Entity extends AbstractEntity
         return $this->getField('key_question');
     }
 
-    public function getStatusCaption(): string
+    public function getStatusTitle(): string
     {
         return Statuses::$list[$this->getStatus()];
     }
@@ -62,6 +62,7 @@ class Entity extends AbstractEntity
 
     public function remove(): void
     {
-        Manager::remove($this);
+        $this->setStatus(Statuses::OBSOLETE);
+        $this->save();
     }
 }

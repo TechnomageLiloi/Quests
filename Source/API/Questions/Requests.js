@@ -10,10 +10,10 @@ API.Questions = {
         });
     },
 
-    show: function (key_problem)
+    show: function (key_question)
     {
         API.request('Exams.Questions.Show', {
-            'key_problem': key_problem
+            'key_question': key_question
         }, function (data) {
             $('#map').html(data.render);
         }, function () {
@@ -37,7 +37,7 @@ API.Questions = {
         });
     },
 
-    remove: function (key_problem, uid)
+    remove: function (key_question)
     {
         if(!confirm('Are you sure?'))
         {
@@ -45,7 +45,7 @@ API.Questions = {
         }
 
         API.request('Exams.Questions.Remove', {
-            'key_problem': key_problem
+            'key_question': key_question
         }, function (data) {
             API.Questions.collection();
         }, function () {
@@ -53,11 +53,10 @@ API.Questions = {
         });
     },
 
-    edit: function (key_problem, uid)
+    edit: function (key_question)
     {
         API.request('Exams.Questions.Edit', {
-            'key_problem': key_problem,
-            'uid': uid
+            'key_question': key_question
         }, function (data) {
             $('#map').html(data.render);
         }, function () {
@@ -65,7 +64,7 @@ API.Questions = {
         });
     },
 
-    save: function (key_problem, uid)
+    save: function (key_question)
     {
         if(!confirm('Are you sure?'))
         {
@@ -74,7 +73,7 @@ API.Questions = {
 
         const jq_block = $('#blueprint-edit');
         API.request('Exams.Questions.Save', {
-            'key_problem': key_problem,
+            'key_question': key_question,
             'title': jq_block.find('[name="title"]').val(),
             'mark': jq_block.find('[name="mark"]').val(),
             'program': jq_block.find('[name="program"]').val(),
