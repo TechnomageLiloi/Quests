@@ -82,9 +82,9 @@ class Manager extends DomainManager
         $data = [
             'title' => 'Enter the title',
             'status' => Statuses::TODO,
-            'type' => '1',
-            'program' => '// comment',
-            'hint' => '// comment',
+            'type' => Types::CARD,
+            'program' => '{}',
+            'theory' => '// comment',
             'tags' => '// comment',
             'dt' => date('Y-m-d H:i:s'),
             'data' => '{}'
