@@ -84,8 +84,8 @@ class Manager extends DomainManager
             'status' => Statuses::TODO,
             'type' => Types::CARD,
             'program' => '{}',
-            'theory' => '// comment',
-            'tags' => '// comment',
+            'theory' => '// theory',
+            'tags' => 'tags',
             'dt' => date('Y-m-d H:i:s'),
             'data' => '{}'
         ];

@@ -75,9 +75,13 @@ API.Questions = {
         API.request('Exams.Questions.Save', {
             'key_question': key_question,
             'title': jq_block.find('[name="title"]').val(),
-            'mark': jq_block.find('[name="mark"]').val(),
+            'status': jq_block.find('[name="status"]').val(),
+            'type': jq_block.find('[name="type"]').val(),
             'program': jq_block.find('[name="program"]').val(),
-            'type': jq_block.find('[name="type"]').val()
+            'theory': jq_block.find('[name="theory"]').val(),
+            'tags': jq_block.find('[name="tags"]').val(),
+            'dt': jq_block.find('[name="dt"]').val(),
+            'data': jq_block.find('[name="data"]').val()
         }, function (data) {
             API.Questions.collection();
         }, function () {

@@ -14,8 +14,13 @@ class Method extends SuperMethod
         $entity = Manager::load($key_question);
 
         $entity->setTitle(self::getParameter('title'));
-        $entity->setProgram(self::getParameter('program'));
+        $entity->setStatus(self::getParameter('status'));
         $entity->setType(self::getParameter('type'));
+        $entity->setProgram(self::getParameter('program'));
+        $entity->setTheory(self::getParameter('program'));
+        $entity->setTags(self::getParameter('tags'));
+        $entity->setDt(self::getParameter('dt'));
+        $entity->setData(self::getParameter('data'));
 
         $entity->save();
 

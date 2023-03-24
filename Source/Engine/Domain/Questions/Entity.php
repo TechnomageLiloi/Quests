@@ -18,8 +18,8 @@ use Liloi\Stylo\Parser;
  * @method string getProgram()
  * @method void setProgram(string $value)
  *
- * @method string getHint()
- * @method void setHint(string $value)
+ * @method string getTheory()
+ * @method void setTheory(string $value)
  *
  * @method string getTags()
  * @method void setTags(string $value)
