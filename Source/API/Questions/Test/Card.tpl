@@ -1,14 +1,11 @@
 <style>
-    #blueprint-edit input,
-    #blueprint-edit select,
-    #blueprint-edit textarea
+    #testing-<?php echo $entity->getKey(); ?>
     {
-        width: 50%;
-    }
-
-    #blueprint-edit textarea
-    {
-        height: 300px;
+        border: gray 2px solid;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ffffe3;
+        margin: 10px;
     }
 </style>
 <div id="testing-<?php echo $entity->getKey(); ?>">
