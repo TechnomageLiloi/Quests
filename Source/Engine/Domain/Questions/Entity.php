@@ -55,6 +55,13 @@ class Entity extends AbstractEntity
         return Parser::parseString($this->getProgram());
     }
 
+    public function getElement(string $key): string
+    {
+        $data = json_decode($this->getProgram(), JSON_UNESCAPED_UNICODE);
+
+        return $data[$key];
+    }
+
     public function save(): void
     {
         Manager::save($this);
