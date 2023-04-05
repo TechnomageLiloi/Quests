@@ -14,15 +14,16 @@ class Method extends SuperMethod
         $tags = self::getParameter('tags');
         $collection = Manager::loadByTags($tags);
 
+        $renders = [];
         foreach($collection as $entity)
         {
-
+            $renders[] = TestMethod::renderTest($entity);
         }
 
         $response = new Response();
 
-        $response->set('render', static::render(__DIR__ . '/' . $template . '.tpl', [
-            'entity' => $entity
+        $response->set('render', static::render(__DIR__ . '/Template.tpl', [
+            'renders' => $renders
         ]));
 
         return $response;
