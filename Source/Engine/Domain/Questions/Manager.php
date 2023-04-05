@@ -40,7 +40,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where tags="%%%s%%";',
+            'select * from %s where tags like "%%%s%%";',
             $name, $tags
         ));
 

@@ -29,6 +29,7 @@ class Tree
         $manager->add(new Method('Exams.Questions.Save', '\Liloi\Exams\API\Questions\Save\Method::execute'));
         $manager->add(new Method('Exams.Questions.Show', '\Liloi\Exams\API\Questions\Show\Method::execute'));
         $manager->add(new Method('Exams.Questions.Test', '\Liloi\Exams\API\Questions\Test\Method::execute'));
+        $manager->add(new Method('Exams.Questions.Suite', '\Liloi\Exams\API\Questions\Suite\Method::execute'));
 
         self::$manager = $manager;
     }

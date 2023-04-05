@@ -75,6 +75,17 @@ API.Questions = {
         });
     },
 
+    suite: function ()
+    {
+        API.request('Exams.Questions.Suite', {
+            'tags': $('#tags').val()
+        }, function (data) {
+            $('#map').html(data.render);
+        }, function () {
+
+        });
+    },
+
     save: function (key_question)
     {
         if(!confirm('Are you sure?'))
