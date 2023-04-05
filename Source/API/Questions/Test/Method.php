@@ -7,6 +7,7 @@ use Liloi\Exams\API\Method as SuperMethod;
 use Liloi\Exams\Engine\Domain\Questions\Manager;
 use Liloi\Exams\Engine\Domain\Questions\Statuses;
 use Liloi\Exams\Engine\Domain\Questions\Types;
+use Liloi\Exams\Engine\Domain\Questions\Entity;
 
 class Method extends SuperMethod
 {
@@ -15,6 +16,13 @@ class Method extends SuperMethod
         $key_question = self::getParameter('key_question');
         $entity = Manager::load($key_question);
 
+        $response = new Response();
+        $response->set('render', self::renderTest($entity));
+        return $response;
+    }
+
+    public static function renderTest(Entity $entity): string
+    {
         switch ($entity->getType())
         {
             case Types::CHECK:
@@ -25,12 +33,8 @@ class Method extends SuperMethod
             default: $template = 'Card';
         }
 
-        $response = new Response();
-
-        $response->set('render', static::render(__DIR__ . '/' . $template . '.tpl', [
+        return static::render(__DIR__ . '/' . $template . '.tpl', [
             'entity' => $entity
-        ]));
-
-        return $response;
+        ]);
     }
 }

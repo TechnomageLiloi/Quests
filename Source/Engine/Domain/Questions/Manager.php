@@ -35,6 +35,25 @@ class Manager extends DomainManager
         return $collection;
     }
 
+    public static function loadByTags(string $tags): Collection
+    {
+        $name = self::getTableName();
+
+        $rows = self::getAdapter()->getArray(sprintf(
+            'select * from %s where tags="%%%s%%";',
+            $name, $tags
+        ));
+
+        $collection = new Collection();
+
+        foreach($rows as $row)
+        {
+            $collection[] = Entity::create($row);
+        }
+
+        return $collection;
+    }
+
     public static function load(string $key_question): Entity
     {
         $name = self::getTableName();
