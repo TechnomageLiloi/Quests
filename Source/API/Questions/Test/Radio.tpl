@@ -19,6 +19,7 @@
     <div class="answer">
         <hr/>
         <?php $answers = $entity->getElement('answers'); ?>
+        <?php shuffle($answers); ?>
         <?php foreach($answers as $answer): ?>
             <input type="radio" name="radio-<?php echo $entity->getKey(); ?>" data-correct="<?php echo $answer['correct'] ?? ''; ?>">
             <?php echo $answer['answer']; ?>

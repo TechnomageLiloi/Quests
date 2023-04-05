@@ -44,6 +44,8 @@ class Manager extends DomainManager
             $name, $tags
         ));
 
+        shuffle($rows);
+
         $collection = new Collection();
 
         foreach($rows as $row)
