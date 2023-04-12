@@ -13,6 +13,7 @@
     </head>
     <body>
         <div id="header">
+            <a href="/">Root</a>
             <input type="text" id="tags" value="test">
             <a href="javascript:void(0)" onclick="API.Questions.suite();">Suite-test</a>
         </div>
