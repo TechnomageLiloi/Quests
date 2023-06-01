@@ -13,8 +13,8 @@
     </head>
     <body>
         <div id="header">
-            <a href="/">Root</a>
-            <input type="text" id="tags" value="test">
+            <a href="<?php echo ROOT_URL !== '' ? ROOT_URL : '/'; ?>">Root</a>
+            <input type="text" id="tags" value="">
             <a href="javascript:void(0)" onclick="API.Questions.suite();">Suite-test</a>
         </div>
         <table style="width: 100%;height: 96%;">

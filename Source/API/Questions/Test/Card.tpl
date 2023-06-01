@@ -7,6 +7,12 @@
         background-color: #ffffe3;
         margin: 10px;
     }
+
+    #testing-<?php echo $entity->getKey(); ?> .question-try
+    {
+        width: 100%;
+        border: none;
+    }
 </style>
 <div id="testing-<?php echo $entity->getKey(); ?>">
 
@@ -21,4 +27,7 @@
         <hr/>
         <?php echo $entity->getElement('answer'); ?>
     </div>
+
+    <hr/>
+    <input type="text" class="question-try" />
 </div>
