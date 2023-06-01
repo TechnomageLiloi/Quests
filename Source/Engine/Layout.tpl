@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-framework/Frontside/Library/Jquery.min.js'); ?></script>
-        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-framework/Frontside/Library/Underscore.min.js'); ?></script>
-        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-framework/Frontside/Library/Backbone.min.js'); ?></script>
-        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/anton-moskalenko/rune-api/Client/API.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/technomage-liloi/rune-framework/Frontside/Library/Jquery.min.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/technomage-liloi/rune-framework/Frontside/Library/Underscore.min.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/technomage-liloi/rune-framework/Frontside/Library/Backbone.min.js'); ?></script>
+        <script><?php echo file_get_contents(ROOT_DIR . '/vendor/technomage-liloi/rune-api/Client/API.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/Source/Client/Command.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/Source/API/Questions/Requests.js'); ?></script>
         <script><?php echo file_get_contents(ROOT_DIR . '/Source/API/Questions/Test/Testing.js'); ?></script>
