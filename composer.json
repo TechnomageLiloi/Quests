@@ -1,15 +1,15 @@
 {
-    "name": "anton-moskalenko/exams",
+    "name": "technomage-liloi/exams",
     "keywords": [
     ],
     "minimum-stability": "dev",
     "require": {
-        "anton-moskalenko/rune-framework": "dev-main",
-        "anton-moskalenko/rune-config": "dev-main",
-        "anton-moskalenko/rune-api": "dev-main",
-        "anton-moskalenko/rune-tools": "dev-main",
-        "anton-moskalenko/judex": "dev-master",
-        "anton-moskalenko/stylo": "dev-main"
+        "technomage-liloi/rune-framework": "dev-main",
+        "technomage-liloi/rune-config": "dev-main",
+        "technomage-liloi/rune-api": "dev-main",
+        "technomage-liloi/rune-tools": "dev-main",
+        "technomage-liloi/judex": "dev-main",
+        "technomage-liloi/stylo": "dev-main"
     },
     "autoload": {
         "psr-4": {
