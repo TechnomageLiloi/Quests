@@ -4,6 +4,11 @@ namespace Liloi\Exams\Engine\Domain\Questions;
 
 use Liloi\Exams\Engine\Domain\Manager as DomainManager;
 
+/**
+ * Question's manager.
+ *
+ * @package Liloi\Exams\Engine\Domain\Questions
+ */
 class Manager extends DomainManager
 {
     /**

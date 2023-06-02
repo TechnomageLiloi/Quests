@@ -6,6 +6,8 @@ use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser;
 
 /**
+ * Question's entity.
+ *
  * @method string getTitle()
  * @method void setTitle(string $value)
  *
@@ -68,11 +70,17 @@ class Entity extends AbstractEntity
         return $data[$key];
     }
 
+    /**
+     * Save question to database.
+     */
     public function save(): void
     {
         Manager::save($this);
     }
 
+    /**
+     * Set question's status as {@see Statuses::OBSOLETE} and save to database.
+     */
     public function remove(): void
     {
         $this->setStatus(Statuses::OBSOLETE);

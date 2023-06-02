@@ -2,6 +2,11 @@
 
 namespace Liloi\Exams\Engine\Domain\Questions;
 
+/**
+ * Question's statuses.
+ *
+ * @package Liloi\Exams\Engine\Domain\Questions
+ */
 class Statuses
 {
     public const TODO = 1;
