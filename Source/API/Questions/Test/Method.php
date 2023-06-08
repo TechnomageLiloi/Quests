@@ -23,12 +23,16 @@ class Method extends SuperMethod
 
     public static function renderTest(Entity $entity): string
     {
+
+        // @todo: encapsulate block at entity
         switch ($entity->getType())
         {
             case Types::CHECK:
                 $template = 'Check'; break;
             case Types::RADIO:
                 $template = 'Radio'; break;
+            case Types::SENTENCE:
+                $template = 'Sentence'; break;
             case Types::CARD:
             default: $template = 'Card';
         }

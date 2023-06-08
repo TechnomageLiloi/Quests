@@ -46,5 +46,27 @@ const Testing = {
         });
 
         alert('Answer is ' + (is_final ? '' : 'in') + 'correct');
+    },
+
+    checkSentence: function (key_question)
+    {
+        const id = '#testing-' + key_question;
+        const jq_block = $(id);
+        const jq_checks = jq_block.find('input');
+
+        let is_final = true;
+
+        jq_checks.each(function () {
+            const jq_check = $(this);
+            const correct = jq_check.data('correct');
+            const actual = jq_check.val();
+
+            if(correct !== actual)
+            {
+                is_final = false;
+            }
+        });
+
+        alert('Answer is ' + (is_final ? '' : 'in') + 'correct');
     }
 };
