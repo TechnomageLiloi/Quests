@@ -6,7 +6,8 @@ use Liloi\Tools\Collection as AbstractCollection;
 
 /**
  * @todo: add tests
- * @todo: add docs
+ * Question's collection.
+ *
  * @package Engine\Domain\Exercise
  */
 class Collection extends AbstractCollection
